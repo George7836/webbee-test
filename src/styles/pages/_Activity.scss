@@ -1,0 +1,12 @@
+.activity {
+    display: grid;
+    grid-template-columns: 1fr, 264px;
+    grid-template-areas: 
+    'main aside';
+    column-gap: 32px;
+    justify-content: stretch;
+
+    .activity__aside {
+        grid-area: aside;
+    }
+}

@@ -1,0 +1,110 @@
+.posts {
+    grid-area: main;
+}
+
+.post {
+    padding: 18px 32px 19px 32px;
+    background-color: $white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+    cursor: pointer;
+
+    .post__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        
+        h4 {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            color: $black;
+        }
+
+        .post__time {
+            display: flex;
+            align-items: center;
+
+            & > *:not(:last-child) {
+                margin-right: 11px;
+            }
+        }
+    }
+
+    .post__content {
+        visibility: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease, visibility 0.2s ease, padding-top 0.4s cubic-bezier(1, 0,.98,.9), padding-bottom 0.3s ease-in;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &.show {
+            max-height: 9999px;
+            visibility: visible;
+            transition: max-height 0.3s ease, visibility 0.2s ease;
+            padding-top: 10px;
+            padding-bottom: 19px;
+        }
+
+        .post__comment {
+            font-size: 14px;
+            color: $black;
+            margin-top: 16px;
+
+            .post__comment-top {
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+    
+                svg {
+                    margin-right: 12px;
+                }
+    
+                .post__commentator {
+                    color: $blue;
+                }
+            }
+
+            .post__comment-content {
+                border-left: 2px solid $grey;
+                padding-left: 8px;
+                margin-bottom: 16px;
+
+                .post__comment-text {
+                    margin-bottom: 16px;
+                }
+
+                .post__comment-date {
+                    color: $second-tx;
+                    font-style: italic;
+                }
+            }
+
+            .post__stats {
+                display: flex;
+                align-items: center;
+
+                .post__views {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 32px;
+
+                    & svg {
+                        margin-right: 8px;
+                    }
+                }
+
+                .post__threads {
+                    display: flex;
+                    align-items: center;
+
+                    & svg {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -10,6 +10,14 @@ import { ReactComponent as FriendsIcon } from './assets/icons/friends.svg';
 import { ReactComponent as PhotosIcon } from './assets/icons/photos.svg';
 import { ReactComponent as SettingsIcon } from './assets/icons/settings.svg';
 import { ReactComponent as ArrowIcon } from './assets/icons/arrow.svg';
+import { ReactComponent as ArrowDownIcon } from './assets/icons/arrow-down.svg';
+import { ReactComponent as ArrowUpIcon } from './assets/icons/arrow-up.svg';
+import { ReactComponent as WatchIcon } from './assets/icons/watch.svg';
+import { ReactComponent as ViewsIcon } from './assets/icons/views.svg';
+import { ReactComponent as CommentIcon } from './assets/icons/comment.svg';
+import { ReactComponent as TelegramIcon } from './assets/icons/telegram.svg';
+import { ReactComponent as HeadHunterIcon } from './assets/icons/hh.svg';
+import { ReactComponent as TwitterIcon } from './assets/icons/twitter.svg';
 
 export {
     BackButtonIcon,
@@ -23,5 +31,13 @@ export {
     FriendsIcon,
     PhotosIcon,
     SettingsIcon,
-    ArrowIcon
+    ArrowIcon,
+    ArrowDownIcon,
+    ArrowUpIcon,
+    WatchIcon,
+    ViewsIcon,
+    CommentIcon,
+    TelegramIcon,
+    HeadHunterIcon,
+    TwitterIcon
 }

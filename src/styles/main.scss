@@ -3,7 +3,14 @@
 @import './base/normalize';
 @import './vars/var';
 @import './components/Navbar';
+@import './pages/Activity';
+@import './components/Posts';
+@import './components/Profile';
 
+html {
+	overflow-x: hidden;
+  	margin-right: calc(-1 * (100vw - 100%));
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
