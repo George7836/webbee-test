@@ -18,6 +18,12 @@ import { ReactComponent as CommentIcon } from './assets/icons/comment.svg';
 import { ReactComponent as TelegramIcon } from './assets/icons/telegram.svg';
 import { ReactComponent as HeadHunterIcon } from './assets/icons/hh.svg';
 import { ReactComponent as TwitterIcon } from './assets/icons/twitter.svg';
+import { ReactComponent as MyProfileIcon } from './assets/icons/myprofile.svg';
+import { ReactComponent as BalanceIcon } from './assets/icons/balance.svg';
+import { ReactComponent as ConnectionsIcon } from './assets/icons/connections.svg';
+import { ReactComponent as EventsIcon } from './assets/icons/events.svg';
+import { ReactComponent as SettingsLargeIcon } from './assets/icons/settingslr.svg';
+import { ReactComponent as FriendsLargeIcon } from './assets/icons/friendslr.svg';
 
 export {
     BackButtonIcon,
@@ -39,5 +45,11 @@ export {
     CommentIcon,
     TelegramIcon,
     HeadHunterIcon,
-    TwitterIcon
+    TwitterIcon,
+    MyProfileIcon,
+    BalanceIcon,
+    ConnectionsIcon,
+    EventsIcon,
+    SettingsLargeIcon,
+    FriendsLargeIcon
 }
