@@ -1,6 +1,6 @@
-import { ReactComponent as BackButtonIcon } from './assets/back.svg';
-import { ReactComponent as StatIcon } from './assets/stat.svg';
-import { ReactComponent as InvoicesIcon } from './assets/invoices.svg';
+import { ReactComponent as BackButtonIcon } from './assets/icons/back.svg';
+import { ReactComponent as StatIcon } from './assets/icons/stat.svg';
+import { ReactComponent as InvoicesIcon } from './assets/icons/invoices.svg';
 import { ReactComponent as ScheduleIcon } from './assets/icons/schedule.svg';
 import { ReactComponent as ActivityIcon } from './assets/icons/activity.svg';
 import { ReactComponent as MapIcon } from './assets/icons/map.svg';
@@ -24,6 +24,9 @@ import { ReactComponent as ConnectionsIcon } from './assets/icons/connections.sv
 import { ReactComponent as EventsIcon } from './assets/icons/events.svg';
 import { ReactComponent as SettingsLargeIcon } from './assets/icons/settingslr.svg';
 import { ReactComponent as FriendsLargeIcon } from './assets/icons/friendslr.svg';
+import { ReactComponent as UpdateIcon } from './assets/icons/update.svg';
+import { ReactComponent as DeleteIcon } from './assets/icons/delete.svg';
+import { ReactComponent as Preloader } from './assets/icons/spinner.svg';
 
 export {
     BackButtonIcon,
@@ -51,5 +54,8 @@ export {
     ConnectionsIcon,
     EventsIcon,
     SettingsLargeIcon,
-    FriendsLargeIcon
+    FriendsLargeIcon,
+    UpdateIcon,
+    DeleteIcon,
+    Preloader 
 }

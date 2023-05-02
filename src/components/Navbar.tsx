@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from '../icons'
+import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from './../icons'
 import { Link, NavLink } from 'react-router-dom'
 
 interface IListItem {
