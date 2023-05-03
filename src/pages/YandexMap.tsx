@@ -1,6 +1,7 @@
-import { YMaps, Map, useYMaps } from '@pbe/react-yandex-maps'
+import { useYMaps } from '@pbe/react-yandex-maps'
 import React, { useEffect, useRef } from 'react'
 import { ArrowDownIcon, DeleteIcon, Preloader, UpdateIcon } from '../icons'
+import PageContainer from '../components/PageContainer'
 
 export default function YandexMap() {
   const mapRef = useRef(null)
