@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from './../icons'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -15,6 +15,7 @@ enum listPages {
 }
 
 export default function Navbar() {
+  const [active, setActive] = useState(false)
 
   const listItem: IListItem[] = [
     {
@@ -42,7 +43,7 @@ export default function Navbar() {
               <button className='navbar__btn btn-reset'>
                 <BackButtonIcon/>
               </button>
-              <h2 className='navbar__titel'><span>User pages</span> - Profile</h2>
+              <h2 className='navbar__titel'><span>User pages -</span> Profile</h2>
             </div>
     
             <ul className='navbar__list list-reset'>
@@ -69,35 +70,49 @@ export default function Navbar() {
       </div>
       <nav className='nav'>
         <div className='nav__pages'>
-            <div className='nav__list'>
-              {listItem.map((item) => (
-                <NavLink to={item.page} key={item.title} className="nav__item">
-                  <>
-                    {item.icon}
-                  </>
-                  {item.title}
-                </NavLink>
-              ))}
+            <div 
+              className={active ? 'nav__burger active' : 'nav__burger'}
+              onClick={() => setActive(!active)}  
+            >
+                <span></span>
             </div>
-            <div className='nav__list'>
-              <div className="nav__item">
-                <NotesIcon/>
-                Notes
+
+          <div className={active ? 'nav__lists active' : 'nav__lists'}>
+              <div className='nav__list'>
+                {listItem.map((item) => (
+                  <NavLink 
+                    to={item.page} 
+                    key={item.title} 
+                    className="nav__item" 
+                    onClick={() => setActive(false)}
+                  >
+                    <>
+                      {item.icon}
+                    </>
+                    {item.title}
+                  </NavLink>
+                ))}
               </div>
-              <div className="nav__item">
-                <FriendsIcon/>
-                Friends
+              <div className='nav__list'>
+                <div className="nav__item">
+                  <NotesIcon/>
+                  Notes
+                </div>
+                <div className="nav__item">
+                  <FriendsIcon/>
+                  Friends
+                </div>
+                <div className="nav__item">
+                  <PhotosIcon/>
+                  Photos
+                </div>
+                
+                <div className="nav__item">
+                  <SettingsIcon/>
+                  {active ? 'Settings' : <ArrowIcon/>}
+                </div>
               </div>
-              <div className="nav__item">
-                <PhotosIcon/>
-                Photos
-              </div>
-              
-              <div className="nav__item">
-                <SettingsIcon/>
-                <ArrowIcon/>
-              </div>
-            </div>
+          </div>
         </div>
       </nav>
     </header>

@@ -56,4 +56,8 @@ img {
     max-width: 1376px;
     padding: 0 32px;
     margin: 0 auto;
+
+	@media (max-width: 500px) {
+		padding: 0 16px;
+	}
 }

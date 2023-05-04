@@ -6,6 +6,14 @@
     column-gap: 32px;
     justify-content: stretch;
 
+    @media (max-width: 850px) {
+        grid-template-areas: 
+            'aside'
+            'main';
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
     .activity__aside {
         grid-area: aside;
     }
