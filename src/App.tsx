@@ -17,6 +17,8 @@ export default function App() {
     } 
   )
 
+  const [isCounting, setIsCounting] = useState(true)
+
   let updatedS = Number(time.s), 
       updatedM = Number(time.m), 
       updatedH = Number(time.h);
@@ -36,17 +38,42 @@ export default function App() {
     return setTime({s:updatedS, m:updatedM, h:updatedH});
   }
  
+  const stop = () => {
+    setIsCounting(false)
+  }
+
   useEffect(() => {
-    let interval = setInterval(run, 1000)
+    let interval = setInterval(() => {
+      if(isCounting) run()
+    }, 1000)
 
     return () => {
       clearInterval(interval)
     }
-  }, [])
+  }, [isCounting])
+
 
   useEffect(() => {
     sessionStorage.setItem('timer', JSON.stringify(time))
   }, [time])
+
+  const isVisible = () => {
+    if(document.visibilityState === 'hidden') {
+      document.title = 'Страница неактивна'
+      stop()
+    } else if(document.visibilityState === 'visible') {
+      document.title = 'Страница активна'
+      setIsCounting(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('visibilitychange', isVisible)
+
+    return () => {
+      window.removeEventListener('visibilitychange', isVisible)
+    }
+  }, [])
 
   return (
     <BrowserRouter>
