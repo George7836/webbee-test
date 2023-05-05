@@ -59,10 +59,8 @@ export default function App() {
 
   const isVisible = () => {
     if(document.visibilityState === 'hidden') {
-      document.title = 'Страница неактивна'
       stop()
     } else if(document.visibilityState === 'visible') {
-      document.title = 'Страница активна'
       setIsCounting(true)
     }
   }

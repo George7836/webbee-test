@@ -36,7 +36,6 @@ export default function YandexMap() {
           </div>
         </div>
           {ymaps 
-            // ? <div ref={mapRef} className='map__field'></div>
             ? <YMaps>
                 <Map
                   className='map__field'

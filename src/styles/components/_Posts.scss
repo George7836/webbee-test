@@ -59,7 +59,7 @@
     .post__content {
         visibility: hidden;
         max-height: 0;
-        transition: max-height 0.3s ease, visibility 0.2s ease, padding-top 0.4s cubic-bezier(1, 0,.98,.9), padding-bottom 0.3s ease-in;
+        transition: max-height 0.3s ease, visibility 0.2s ease, padding-top 0.3s cubic-bezier(1, 0,.98,.9), padding-bottom 0.3s ease;
         padding-top: 0;
         padding-bottom: 0;
 
