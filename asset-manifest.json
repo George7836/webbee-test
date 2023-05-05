@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webbee-test/static/css/main.90326856.css",
-    "main.js": "/webbee-test/static/js/main.b01bc4fd.js",
+    "main.js": "/webbee-test/static/js/main.dc6000ac.js",
     "static/media/balance.svg": "/webbee-test/static/media/balance.d6dd79de5895a6d50d4137cf87fe2c7e.svg",
     "static/media/stat.svg": "/webbee-test/static/media/stat.a5bada485463ec1a1b0e8e15f757c168.svg",
     "static/media/settings.svg": "/webbee-test/static/media/settings.c40fdd8689752163dfb86496a61a243f.svg",
@@ -33,10 +33,10 @@
     "static/media/arrow-down.svg": "/webbee-test/static/media/arrow-down.005a1dc66f6f6b9dcbe5647fb63d98e1.svg",
     "static/media/arrow-up.svg": "/webbee-test/static/media/arrow-up.ca538d13dfa7ec2c66ad8b9d22df1b97.svg",
     "main.90326856.css.map": "/webbee-test/static/css/main.90326856.css.map",
-    "main.b01bc4fd.js.map": "/webbee-test/static/js/main.b01bc4fd.js.map"
+    "main.dc6000ac.js.map": "/webbee-test/static/js/main.dc6000ac.js.map"
   },
   "entrypoints": [
     "static/css/main.90326856.css",
-    "static/js/main.b01bc4fd.js"
+    "static/js/main.dc6000ac.js"
   ]
 }
