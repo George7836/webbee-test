@@ -79,9 +79,10 @@ export default function App() {
       <div className='container'>
        <YMaps>
           <Routes>
-            <Route path='/' element={<Activity/>}/>
-            <Route path='/map' element={<YandexMap/>}/>
-            <Route path='/timer' element={<Timer seconds={time.s} minutes={time.m} hours={time.h}/>}/>
+            <Route path='/../' element={<Activity/>}/>
+            <Route path='/../map' element={<YandexMap/>}/>
+            <Route path='/../timer' element={<Timer seconds={time.s} minutes={time.m} hours={time.h}/>}/>
+            <Route path='*' element={<Activity/>}/>
           </Routes>
        </YMaps>
       </div>

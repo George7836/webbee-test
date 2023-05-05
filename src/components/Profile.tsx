@@ -4,7 +4,7 @@ import { HeadHunterIcon, TelegramIcon, TwitterIcon } from '../icons'
 export default function Profile() {
   return (
     <div className='profile'>
-      <img src="./assets/images/avatar.png" alt="" className='profile__img'/>
+      <img src={process.env.PUBLIC_URL + '/assets/images/avatar.png'} alt="" className='profile__img'/>
       <h3 className='profile__name'>Hanna Dorman</h3>
       <span className='profile__prof'>UX/UI designer</span>
       <div className='profile__socials'>

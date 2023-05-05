@@ -9,7 +9,7 @@ type PostsList = {
 const posts: PostsList[] = [
   {
       title: 'Title',
-      content: './assets/images/abstract.jpg'
+      content: process.env.PUBLIC_URL + '/assets/images/abstract.jpg'
   },
   {
       title: 'Sunset',
