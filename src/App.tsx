@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './styles/main.scss'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Activity from './pages/Activity'
 import YandexMap from './pages/YandexMap'
@@ -74,7 +74,7 @@ export default function App() {
   }, [])
 
   return (
-    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <HashRouter basename='/'>
       <Navbar/>
       <div className='container'>
        <YMaps>
@@ -86,6 +86,6 @@ export default function App() {
           </Routes>
        </YMaps>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
