@@ -1,23 +1,8 @@
 import { Placemark, YMaps, useYMaps, Map } from '@pbe/react-yandex-maps'
-import React, { useEffect, useRef } from 'react'
 import { ArrowDownIcon, DeleteIcon, Preloader, UpdateIcon } from '../icons'
-import PageContainer from '../components/PageContainer'
-import ymaps from 'yandex-maps'
 
 export default function YandexMap() {
-  // const mapRef = useRef(null)
   const ymaps = useYMaps(['Map'])
-
-  // useEffect(() => {
-  //   if (!ymaps || !mapRef.current) {
-  //     return;
-  //   }
-
-  //   new ymaps.Map(mapRef.current, {
-  //     center: [56.74160758449387,37.16145249999998],
-  //     zoom: 12,
-  //   });
-  // }, [ymaps]);
 
   return (
       <div className='map'>

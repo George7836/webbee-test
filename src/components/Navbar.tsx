@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from './../icons'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 interface IListItem {
   icon: React.SVGProps<SVGSVGElement>;
@@ -14,26 +14,26 @@ enum listPages {
   time = '/timer'
 }
 
+const listItem: IListItem[] = [
+  {
+    icon: <ActivityIcon/>,
+    title: 'Activity',
+    page: listPages.activity,
+  },
+  {
+    icon: <MapIcon/>,
+    title: 'Map',
+    page: listPages.map,
+  },
+  {
+    icon: <TimeIcon/>,
+    title: 'Time',
+    page: listPages.time
+  }
+]
+
 export default function Navbar() {
   const [active, setActive] = useState(false)
-
-  const listItem: IListItem[] = [
-    {
-      icon: <ActivityIcon/>,
-      title: 'Activity',
-      page: listPages.activity,
-    },
-    {
-      icon: <MapIcon/>,
-      title: 'Map',
-      page: listPages.map,
-    },
-    {
-      icon: <TimeIcon/>,
-      title: 'Time',
-      page: listPages.time
-    }
-  ]
 
   return (
     <header className='navbar'>
@@ -45,7 +45,6 @@ export default function Navbar() {
               </button>
               <h2 className='navbar__titel'><span>User pages -</span> Profile</h2>
             </div>
-    
             <ul className='navbar__list list-reset'>
               <li className='navbar__item'>
                 <a href='#' className='navbar__link'>
@@ -76,7 +75,6 @@ export default function Navbar() {
             >
                 <span></span>
             </div>
-
           <div className={active ? 'nav__lists active' : 'nav__lists'}>
               <div className='nav__list'>
                 {listItem.map((item) => (

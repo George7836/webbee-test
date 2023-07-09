@@ -1,4 +1,3 @@
-import React from 'react'
 import Accordeon from './Accordeon'
 
 export default function NewPublication() {

@@ -1,9 +1,9 @@
 import React from 'react'
 import Accordeon from './Accordeon'
-import { BalanceIcon, ConnectionsIcon, EventsIcon, FriendsIcon, FriendsLargeIcon, MyProfileIcon, SettingsIcon, SettingsLargeIcon } from '../icons';
+import { BalanceIcon, ConnectionsIcon, EventsIcon, FriendsLargeIcon, MyProfileIcon, SettingsLargeIcon } from '../icons';
 
 type NavigationList = {
-  logo: React.SVGProps<SVGSVGElement>;
+  logo: React.ReactElement;
   title: string;
   stat?: string;
   notification?: string;
@@ -30,46 +30,38 @@ const navList: NavigationList[] = [
   }
 ]
 
-
 export default function Navigation() {
   return (
     <Accordeon title='Navigation'>
         {navList.map((item) => (
           <div className='accordeon__item'>
-           <div className='accordeon__item-left'>
-              <> 
+            <div className='accordeon__item-left'> 
                 {item.logo}
-              </>
-              
-              <span className='accordeon__item-title'>{item.title}</span>
-           </div>
-            
+                <span className='accordeon__item-title'>{item.title}</span>
+            </div>
             {item.stat 
               ? <span className='accordeon__item-stat'>{item.stat}</span> 
-              : ''
+              : null
             }
-
             {item.notification
               ? <div className='accordeon__item-notification'>{item.notification}</div>
-              : ''
+              : null
             }
           </div>
         ))}
-
-         <div className='accordeon__item accordeon__item--border'>
-            <div className='accordeon__item-left'>
-                <EventsIcon/>
-                <span className='accordeon__item-title'>Events</span>
-            </div>
-            <div className='accordeon__item-notification item-notification--green'>45</div>
-         </div>
-
-         <div className='accordeon__item'>
-            <div className='accordeon__item-left'>
-                <SettingsLargeIcon/>
-                <span className='accordeon__item-title'>Account settings</span>
-            </div>
-         </div>
+        <div className='accordeon__item accordeon__item--border'>
+          <div className='accordeon__item-left'>
+              <EventsIcon/>
+              <span className='accordeon__item-title'>Events</span>
+          </div>
+          <div className='accordeon__item-notification item-notification--green'>45</div>
+        </div>
+        <div className='accordeon__item'>
+          <div className='accordeon__item-left'>
+              <SettingsLargeIcon/>
+              <span className='accordeon__item-title'>Account settings</span>
+          </div>
+        </div>
     </Accordeon>
   )
 }

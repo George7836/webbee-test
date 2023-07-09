@@ -1,4 +1,3 @@
-import React from 'react'
 import Posts from '../components/Posts'
 import Profile from '../components/Profile'
 import Navigation from '../components/Navigation'

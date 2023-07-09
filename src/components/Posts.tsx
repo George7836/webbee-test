@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import Post from './Post'
+import Abstract from '../assets/images/abstract.jpg'
 
 type PostsList = {
   title: string,
@@ -9,7 +9,7 @@ type PostsList = {
 const posts: PostsList[] = [
   {
       title: 'Title',
-      content: process.env.PUBLIC_URL + '/assets/images/abstract.jpg'
+      content: Abstract
   },
   {
       title: 'Sunset',
@@ -21,14 +21,12 @@ const posts: PostsList[] = [
   },
 ]
 
-
-
 export default function Posts() {
-
   return (
     <div className='posts'>
       {posts.map((post) => (
-        <Post 
+        <Post
+          key={post.title} 
           title={post.title}
           content={post.content}
         />

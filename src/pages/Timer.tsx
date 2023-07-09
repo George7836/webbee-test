@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import PageContainer from '../components/PageContainer'
 
 type TimerProps = {
@@ -8,7 +7,6 @@ type TimerProps = {
 }
 
 export default function Timer({seconds, minutes, hours}: TimerProps) {
-
   return (
     <PageContainer title='Timer'>
       <div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { ArrowDownIcon, ArrowUpIcon, CommentIcon, ViewsIcon, WatchIcon } from '../icons'
 type Post = {
     title: string,
