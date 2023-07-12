@@ -3,7 +3,7 @@ import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, Map
 import { NavLink } from 'react-router-dom'
 
 interface IListItem {
-  icon: React.SVGProps<SVGSVGElement>;
+  icon: React.ReactNode;
   title: string;
   page: string;
 }
@@ -84,9 +84,7 @@ export default function Navbar() {
                     className="nav__item" 
                     onClick={() => setActive(false)}
                   >
-                    <>
-                      {item.icon}
-                    </>
+                    {item.icon}
                     {item.title}
                   </NavLink>
                 ))}
@@ -104,7 +102,6 @@ export default function Navbar() {
                   <PhotosIcon/>
                   Photos
                 </div>
-                
                 <div className="nav__item">
                   <SettingsIcon/>
                   {active ? 'Settings' : <ArrowIcon/>}

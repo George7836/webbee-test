@@ -8,7 +8,7 @@
         padding: 16px;
     }
 
-    .map__top {
+    &__top {
         padding-bottom: 18px;
         display: flex;
         justify-content: space-between;
@@ -26,7 +26,7 @@
         }
     }
 
-    .map__field {
+    &__field {
         height: 480px;
 
         @media (max-width: 1000px) {
