@@ -1,9 +1,9 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import Accordeon from './Accordeon'
 import { BalanceIcon, ConnectionsIcon, EventsIcon, FriendsLargeIcon, MyProfileIcon, SettingsLargeIcon } from '../icons';
 
 type NavigationList = {
-  logo: React.ReactElement;
+  logo: ReactNode;
   title: string;
   stat?: string;
   notification?: string;

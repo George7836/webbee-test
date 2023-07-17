@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from './../icons'
 import { NavLink } from 'react-router-dom'
 
 interface IListItem {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   page: string;
 }

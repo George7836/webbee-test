@@ -1,9 +1,9 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import { ArrowDownIcon, DeleteIcon, UpdateIcon } from '../icons'
 
 type PageContainerProps = {
     title: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export default function PageContainer({title, children}: PageContainerProps) {

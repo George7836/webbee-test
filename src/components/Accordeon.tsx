@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { ArrowDownIcon, ArrowUpIcon } from '../icons';
 
 type AccordeonProps = {
     title: string;
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export default function Accordeon({title, children}: AccordeonProps) {
