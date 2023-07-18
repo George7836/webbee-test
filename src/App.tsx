@@ -5,6 +5,7 @@ import Activity from './pages/Activity'
 import Timer from './pages/Timer'
 import MapContainer from './pages/MapContainer'
 import { useTimer } from './hooks/useTimer'
+import { listPages } from './routes'
 
 export default function App() {
   const time = useTimer()
@@ -15,9 +16,9 @@ export default function App() {
         <Navbar/>
         <div className='container'>
           <Routes>
-            <Route path='/' element={<Activity/>}/>
-            <Route path='/map' element={<MapContainer/>}/>
-            <Route path='/timer' element={<Timer seconds={time.seconds} minutes={time.minutes} hours={time.hours}/>}/>
+            <Route path={listPages.activity} element={<Activity/>}/>
+            <Route path={listPages.map} element={<MapContainer/>}/>
+            <Route path={listPages.time} element={<Timer seconds={time.seconds} minutes={time.minutes} hours={time.hours}/>}/>
           </Routes>
         </div>
     </div>

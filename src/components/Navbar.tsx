@@ -1,17 +1,12 @@
 import { ReactNode, useState } from 'react'
 import { ActivityIcon, ArrowIcon, BackButtonIcon, FriendsIcon, InvoicesIcon, MapIcon, NotesIcon, PhotosIcon, ScheduleIcon, SettingsIcon, StatIcon, TimeIcon } from './../icons'
 import { NavLink } from 'react-router-dom'
+import { listPages } from '../routes'
 
 interface IListItem {
   icon: ReactNode;
   title: string;
   page: string;
-}
-
-enum listPages {
-  activity = '/',
-  map = '/map',
-  time = '/timer'
 }
 
 const listItem: IListItem[] = [
