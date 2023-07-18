@@ -11,14 +11,16 @@ export default function App() {
 
   return (
     <HashRouter basename='/'>
-      <Navbar/>
-      <div className='container'>
-        <Routes>
-          <Route path='/' element={<Activity/>}/>
-          <Route path='/map' element={<MapContainer/>}/>
-          <Route path='/timer' element={<Timer seconds={time.seconds} minutes={time.minutes} hours={time.hours}/>}/>
-        </Routes>
-      </div>
+    <div className='wrapper'>
+        <Navbar/>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<Activity/>}/>
+            <Route path='/map' element={<MapContainer/>}/>
+            <Route path='/timer' element={<Timer seconds={time.seconds} minutes={time.minutes} hours={time.hours}/>}/>
+          </Routes>
+        </div>
+    </div>
     </HashRouter>
   )
 }

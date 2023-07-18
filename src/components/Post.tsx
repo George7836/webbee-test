@@ -26,7 +26,7 @@ export default function Post({title, content}: Post) {
                 </div>
             </div>
             <div className={selected ? 'post__content show' : 'post__content'}>
-                <img src={content} alt="" />
+                <img className='post__img' src={content} alt="" />
                 <div className='post__comment'>
                     <div className='post__comment-top'>
                         <CommentIcon/>
