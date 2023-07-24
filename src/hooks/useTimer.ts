@@ -13,14 +13,13 @@ export function useTimer() {
   const [isCounting, setIsCounting] = useState(true)
 
   function addTime(curr: number) {
-    time.hours = Math.floor((curr % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    time.minutes = Math.floor((curr % (1000 * 60 * 60)) / (1000 * 60))
-    time.seconds = Math.floor((curr % (1000 * 60)) / 1000)
+    const hours = Math.floor((curr % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((curr % (1000 * 60 * 60)) / (1000 * 60))
+    const seconds = Math.floor((curr % (1000 * 60)) / 1000)
     setTime({
-      ...time,
-      hours: time.hours, 
-      minutes: time.minutes, 
-      seconds: time.seconds
+      hours: hours, 
+      minutes: minutes, 
+      seconds: seconds
     })
   }
 
