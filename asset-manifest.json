@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/webbee-test/static/css/main.90326856.css",
-    "main.js": "/webbee-test/static/js/main.bef8cb8e.js",
+    "main.css": "/webbee-test/static/css/main.a1e468d0.css",
+    "main.js": "/webbee-test/static/js/main.d6b737d6.js",
     "static/media/abstract.jpg": "/webbee-test/static/media/abstract.34e2c8ad1e81d92ff978.jpg",
     "static/media/avatar.png": "/webbee-test/static/media/avatar.dafea3e6348080e3de06.png",
     "static/media/balance.svg": "/webbee-test/static/media/balance.d6dd79de5895a6d50d4137cf87fe2c7e.svg",
@@ -34,11 +34,11 @@
     "static/media/arrow.svg": "/webbee-test/static/media/arrow.74a62c2234b5c4a53e604458139e83b6.svg",
     "static/media/arrow-down.svg": "/webbee-test/static/media/arrow-down.005a1dc66f6f6b9dcbe5647fb63d98e1.svg",
     "static/media/arrow-up.svg": "/webbee-test/static/media/arrow-up.ca538d13dfa7ec2c66ad8b9d22df1b97.svg",
-    "main.90326856.css.map": "/webbee-test/static/css/main.90326856.css.map",
-    "main.bef8cb8e.js.map": "/webbee-test/static/js/main.bef8cb8e.js.map"
+    "main.a1e468d0.css.map": "/webbee-test/static/css/main.a1e468d0.css.map",
+    "main.d6b737d6.js.map": "/webbee-test/static/js/main.d6b737d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.90326856.css",
-    "static/js/main.bef8cb8e.js"
+    "static/css/main.a1e468d0.css",
+    "static/js/main.d6b737d6.js"
   ]
 }
