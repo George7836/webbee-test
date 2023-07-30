@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/main.scss'
+import { Routes, Route, HashRouter } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Activity from './pages/Activity'
+import Timer from './pages/Timer'
+import MapContainer from './pages/MapContainer'
+import { useTimer } from './hooks/useTimer'
+import { listPages } from './routes'
 
-function App() {
+export default function App() {
+  const time = useTimer()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <HashRouter basename='/'>
+    <div className='wrapper'>
+        <Navbar/>
+        <div className='container'>
+          <Routes>
+            <Route path={listPages.activity} element={<Activity/>}/>
+            <Route path={listPages.map} element={<MapContainer/>}/>
+            <Route path={listPages.time} element={<Timer seconds={time.seconds} minutes={time.minutes} hours={time.hours}/>}/>
+          </Routes>
+        </div>
     </div>
-  );
+    </HashRouter>
+  )
 }
-
-export default App;

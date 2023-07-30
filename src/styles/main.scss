@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+@import './base/normalize';
+@import './vars/var';
+@import './components/Navbar';
+@import './pages/Activity';
+@import './components/Posts';
+@import './components/Profile';
+@import './components/Accordeon';
+@import './components/NewPublication';
+@import './pages/Map';
+@import './components/Preloader';
+@import './components/PageContainer';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.btn-reset {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#root {
+	overflow-x: hidden;
+}
+
+.wrapper {
+	margin-right: calc(-1 * (100vw - 100%));
+	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	background-color: $bg;
+}
+
+.container {
+	max-width: 1376px;
+	padding: 0 32px;
+	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		padding: 0 16px;
+	}
+}
